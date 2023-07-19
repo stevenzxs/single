@@ -1,0 +1,161 @@
+buildscript {
+    ext {
+        springBootVersion = '2.5.12'
+        lombokVersion = '1.18.12'
+        hutoolAll = '5.8.5'
+        httpmime = '4.5.13'
+        httpclient = '4.5.13'
+        fastjson = '2.0.4'
+        commonsCollections4 = '4.1'
+        commonsLang3 = '3.9'
+        jjwtJackson = '0.11.2'
+        jjwtApi = '0.11.2'
+        jjwtImpl = '0.11.2'
+        mybatisPlusBootStarter = '3.5.1'
+        mybatisPlusGenerator = '3.5.1'
+        freemarker = '2.3.28'
+        junitJupiterApi = '5.1.0'
+        junitJupiterEngine = '5.1.0'
+        HikariCP = '4.0.3'
+        pagehelperSpringBootStarter = '1.4.6'
+        springOpenapiUi = '1.6.14'
+        springfoxSwagger2 = '2.10.5'
+        knife4jSpring = '2.0.9'
+        stevenCommon = '0.0.1'
+        ibeetlBeetl = '1.2.40.Beetl.RELEASE'
+        smCrypto = '0.3.2'
+        ip2region = '2.6.3'
+        saToken = '1.31.0'
+        easyTransAnno = '2.1.7'
+        easyTrans = '2.1.7'
+        easyexcel = '3.2.1'
+        easypoi = '4.3.0'
+        aliyunJavaSdk = '4.5.10'
+        aliyunJavaSdkDm = '3.3.1'
+        aliyunSdkOss = '3.14.0'
+        dysmsapi20170525 = '2.0.9'
+        tencentcloudSdkJavaKms = '3.1.213'
+        tencentcloudSdkJavaSes = '3.1.455'
+        tencentcloudSdkJavaSms = '3.1.455'
+        minio = '8.5.2'
+        cosApi = '5.6.68'
+        springContext = '5.3.19'
+        oshiCore = '6.2.2'
+        JustAuth = '1.16.5'
+        Mysql = '5.1.47'
+        HikariCP = '4.0.3'
+        plusExtend = '2.1.7'
+        commonsPool2 = '2.11.1'
+        jacksonCore = '2.14.2'
+        jacksonDatabind = '2.14.2'
+        pinyin4j = '2.5.1'
+        ip2region = '2.6.3'
+        easypoiStarter = '4.3.0'
+        jettison = '1.5.4'
+        javaxMail = '1.6.2'
+        validationApi = '2.0.2'
+        springSecurityCryptoVersion = '6.0.2'
+        springContextVersion = '5.3.19'
+        okhttp3Version = '4.10.0'
+        okioVersion = '3.3.0'
+        junit = '4.13.2'
+        logbackClassicVersion = '1.2.0'
+        gsonVersion = '2.8.9'
+        guavaVersion = '31.1-jre'
+        nettyCommonVersion = '4.1.89.Final'
+        snakeyamlVersion = '2.0'
+        tomcatEmbedCoreVersion = '9.0.72'
+        commonsBeanutilsVersion = '1.9.4'
+        commonsCompressVersion = '1.22'
+        protobufJavaVersion = '3.21.12'
+        checkerQualVersion = '3.31.0'
+        bcprovJdk15onVersion = '1.70'
+        cloudCommonsVersion = '2.2.1.RELEASE'
+    }
+    repositories {
+        mavenLocal()
+        maven{ url 'https://repo1.maven.org/maven2/'}
+        maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    group = 'com.steven'
+    version = '0.0.1'
+    //指定JDK版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    //指定编码格式
+    tasks.withType(JavaCompiler){
+        options.encoding = "UTF-8"
+    }
+
+    repositories {
+        mavenLocal()
+        maven{ url 'https://repo1.maven.org/maven2/'}
+        maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation "mysql:mysql-connector-java:${Mysql}"
+        implementation "com.github.xiaoymin:knife4j-spring-boot-starter:${knife4jSpring}"
+
+        implementation "org.springframework.boot:spring-boot-configuration-processor"
+        implementation "org.springframework.boot:spring-boot-starter-aop"
+        implementation "org.springframework.boot:spring-boot-starter-validation"
+        implementation "org.springframework.boot:spring-boot-starter-jdbc"
+        implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+        implementation "org.springframework.boot:spring-boot-starter-data-redis"
+        implementation "org.springframework.boot:spring-boot-starter"
+        implementation "org.springframework.boot:spring-boot-starter-web"
+        testImplementation "org.springframework.boot:spring-boot-starter-test"
+
+        developmentOnly 'org.springframework.boot:spring-boot-devtools'
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+        testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterApi}"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiterEngine}"
+
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+        }
+    }
+}
+
+subprojects{
+
+    apply plugin: 'io.spring.dependency-management'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+        }
+    }
+    jar {
+        manifest.attributes provider: 'gradle'
+    }
+
+    tasks.named('test') {
+        useJUnitPlatform()
+    }
+}
+

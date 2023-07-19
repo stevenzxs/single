@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.12/48e4e5d60309ebd833bc528dcf77668eab3cd72c/lombok-1.18.12.jar" />
+          <entry name="$PROJECT_DIR$/../../../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.5.12/904262a5686e4acd0017a4fbe7b9d94de2784aed/spring-boot-configuration-processor-2.5.12.jar" />
+        </processorPath>
+        <module name="steven-single.plugin.plugin-client.main" />
+        <module name="steven-single.plugin-api.plugin-client-api.main" />
+        <module name="steven-single.plugin.plugin-mobile.main" />
+        <module name="steven-single.main" />
+        <module name="steven-single.plugin-api.plugin-mobile-api.main" />
+        <module name="steven-single.plugin-api.plugin-biz-api.main" />
+        <module name="steven-single.plugin-api.plugin-sys-api.main" />
+        <module name="steven-single.plugin.plugin-sys.main" />
+        <module name="steven-single.app.main" />
+        <module name="steven-single.plugin-api.main" />
+        <module name="steven-single.common.main" />
+        <module name="steven-single.plugin.main" />
+        <module name="steven-single.plugin-api.plugin-dev-api.main" />
+        <module name="steven-single.plugin.plugin-auth.main" />
+        <module name="steven-single.plugin.plugin-dev.main" />
+        <module name="steven-single.plugin.plugin-biz.main" />
+        <module name="steven-single.plugin-api.plugin-auth-api.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8" />
+  </component>
+</project>

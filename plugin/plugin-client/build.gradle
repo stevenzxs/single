@@ -1,0 +1,13 @@
+plugins{
+    id 'java'
+}
+
+//group 'com.steven.client'
+//version '0.0.1'
+
+dependencies {
+    implementation project(':common')
+    implementation project(':plugin-api:plugin-client-api')
+    implementation project(':plugin-api:plugin-auth-api')
+    implementation project(':plugin-api:plugin-dev-api')
+}

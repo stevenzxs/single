@@ -1,0 +1,11 @@
+plugins{
+    id 'java'
+}
+
+//group 'com.steven.client'
+//version '0.0.1'
+
+dependencies {
+    implementation project(':common')
+//    api "com.github.xiaoymin:knife4j-spring-boot-starter:${knife4jSpring}"
+}

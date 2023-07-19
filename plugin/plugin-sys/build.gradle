@@ -1,0 +1,14 @@
+plugins{
+    id 'java'
+}
+
+//group 'com.steven.sys'
+//version '0.0.1'
+
+dependencies {
+    implementation project(':common')
+    implementation project(':plugin-api:plugin-auth-api')
+    implementation project(':plugin-api:plugin-dev-api')
+    implementation project(':plugin-api:plugin-sys-api')
+    implementation project(':plugin-api:plugin-mobile-api')
+}

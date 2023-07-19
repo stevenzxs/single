@@ -1,0 +1,112 @@
+plugins {
+    id 'java-library'
+}
+
+//group 'com.steven.common'
+//version '0.0.1'
+
+dependencies {
+
+    api("com.fhs-opensource:easy-trans-spring-boot-starter:${easyTrans}"){
+        exclude group: 'com.baomidou', module: 'mybatis-plus-annotation'
+        exclude group: 'io.springfox', module: 'springfox-schema'
+        exclude group: 'com.google.errorprone', module: 'error_prone_annotations'
+    }
+
+    api("com.fhs-opensource:easy-trans-mybatis-plus-extend:${plusExtend}"){
+        exclude group: 'com.baomidou', module: 'mybatis-plus-extension'
+    }
+
+    api "org.bouncycastle:bcprov-jdk15on:${bcprovJdk15onVersion}"
+    api "org.checkerframework:checker-qual:${checkerQualVersion}"
+    api "com.google.protobuf:protobuf-java:${protobufJavaVersion}"
+    api "org.apache.commons:commons-compress:${commonsCompressVersion}"
+    api "commons-beanutils:commons-beanutils:${commonsBeanutilsVersion}"
+    api "org.apache.commons:commons-pool2:${commonsPool2}"
+    api "com.fasterxml.jackson.core:jackson-core:${jacksonCore}"
+    api "com.fasterxml.jackson.core:jackson-databind:${jacksonDatabind}"
+    api "com.fasterxml.jackson.core:jackson-annotations:${jacksonDatabind}"
+    api "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonDatabind}"
+    api "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonDatabind}"
+    api "com.fasterxml.jackson.module:jackson-module-parameter-names:${jacksonDatabind}"
+    api "com.belerweb:pinyin4j:${pinyin4j}"
+    api "org.lionsoul:ip2region:${ip2region}"
+    api("cn.afterturn:easypoi-spring-boot-starter:${easypoiStarter}"){
+        exclude group: 'org.javassist', module: 'javassist'
+        exclude group: 'org.apache.poi', module: 'poi'
+        exclude group: 'org.apache.poi', module: 'poi-ooxml'
+        exclude group: 'org.apache.poi', module: 'poi-ooxml-schemas'
+    }
+
+    api "com.squareup.okio:okio:${okioVersion}"
+    api "com.squareup.okhttp3:okhttp:${okhttp3Version}"
+    api "com.alibaba:easyexcel:${easyexcel}"
+    api "org.lionsoul:ip2region:${ip2region}"
+    api "com.antherd:sm-crypto:${smCrypto}"
+    api "io.springfox:springfox-swagger2:${springfoxSwagger2}"
+    api "io.springfox:springfox-swagger-ui:${springfoxSwagger2}"
+    api "cn.hutool:hutool-all:${hutoolAll}"
+    api "org.apache.httpcomponents:httpmime:${httpmime}"
+    api "org.apache.httpcomponents:httpclient:${httpclient}"
+    api "com.alibaba:fastjson:${fastjson}"
+    api "org.apache.commons:commons-collections4:${commonsCollections4}"
+    api "org.apache.commons:commons-lang3:${commonsLang3}"
+    api "io.jsonwebtoken:jjwt-jackson:${jjwtJackson}"
+    api "io.jsonwebtoken:jjwt-api:${jjwtApi}"
+    api "io.jsonwebtoken:jjwt-impl:${jjwtImpl}"
+    api "com.baomidou:mybatis-plus-boot-starter:${mybatisPlusBootStarter}"
+    api "com.baomidou:mybatis-plus-generator:${mybatisPlusGenerator}"
+    api "com.baomidou:mybatis-plus-extension:${mybatisPlusGenerator}"
+
+    api "org.freemarker:freemarker:${freemarker}"
+    api "com.zaxxer:HikariCP:${HikariCP}"
+    api "org.springdoc:springdoc-openapi-ui:${springOpenapiUi}"
+    api "com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelperSpringBootStarter}"
+    api "io.springfox:springfox-swagger2:${springfoxSwagger2}"
+    api "io.springfox:springfox-swagger-ui:${springfoxSwagger2}"
+//    api "com.github.xiaoymin:knife4j-spring-boot-starter:${knife4jSpring}"
+
+    api "com.ibeetl:beetl-framework-starter:${ibeetlBeetl}"
+    api "junit:junit:${junit}"
+    api "ch.qos.logback:logback-classic:${logbackClassicVersion}"
+    api "com.google.code.gson:gson:${gsonVersion}"
+    api "com.google.guava:guava:${guavaVersion}"
+    api "io.netty:netty-common:${nettyCommonVersion}"
+    api "io.netty:netty-handler:${nettyCommonVersion}"
+    api "org.codehaus.jettison:jettison:${jettison}"
+    api "org.yaml:snakeyaml:${snakeyamlVersion}"
+    api "org.springframework:spring-context:${springContext}"
+    api "cn.dev33:sa-token-spring-boot-starter:${saToken}"
+    api "cn.dev33:sa-token-core:${saToken}"
+    api "cn.dev33:sa-token-dao-redis-jackson:${saToken}"
+    api "cn.dev33:sa-token-alone-redis:${saToken}"
+    api "cn.dev33:sa-token-sso:${saToken}"
+    api "me.zhyd.oauth:JustAuth:${JustAuth}"
+
+    api "org.apache.tomcat.embed:tomcat-embed-core:${tomcatEmbedCoreVersion}"
+    api "jakarta.validation:jakarta.validation-api:${validationApi}"
+
+
+    api("com.qcloud:cos_api:${cosApi}"){
+        exclude group: 'com.tencentcloudapi', module: 'tencentcloud-sdk-java-common'
+    }
+    api("com.aliyun.oss:aliyun-sdk-oss:${aliyunSdkOss}"){
+        exclude group: 'org.codehaus.jettison', module: 'jettison'
+    }
+    api "io.minio:minio:${minio}"
+    api "com.sun.mail:javax.mail:${javaxMail}"
+    api "com.aliyun:aliyun-java-sdk-dm:${aliyunJavaSdkDm}"
+    api("com.tencentcloudapi:tencentcloud-sdk-java-ses:${tencentcloudSdkJavaSes}"){
+        exclude group: 'com.squareup.okio', module: 'okio-jvm'
+    }
+    api("com.aliyun:dysmsapi20170525:${dysmsapi20170525}"){
+        exclude group: 'org.jacoco', module: 'org.jacoco.agent'
+    }
+    api "com.tencentcloudapi:tencentcloud-sdk-java-sms:${tencentcloudSdkJavaSms}"
+    api "com.github.oshi:oshi-core:${oshiCore}"
+
+}
+
+jar{
+    enabled = true
+}

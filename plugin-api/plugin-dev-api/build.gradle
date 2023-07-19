@@ -1,0 +1,29 @@
+plugins{
+    id 'java'
+}
+
+//group 'com.steven.dev'
+//version '0.0.1'
+
+dependencies {
+    implementation project(':common')
+    /*
+    api("com.qcloud:cos_api:${cosApi}"){
+        exclude group: 'com.tencentcloudapi', module: 'tencentcloud-sdk-java-common'
+    }
+    api("com.aliyun.oss:aliyun-sdk-oss:${aliyunSdkOss}"){
+        exclude group: 'org.codehaus.jettison', module: 'jettison'
+    }
+    api "io.minio:minio:${minio}"
+    api "com.sun.mail:javax.mail:${javaxMail}"
+    api "com.aliyun:aliyun-java-sdk-dm:${aliyunJavaSdkDm}"
+    api("com.tencentcloudapi:tencentcloud-sdk-java-ses:${tencentcloudSdkJavaSes}"){
+        exclude group: 'com.squareup.okio', module: 'okio-jvm'
+    }
+    api("com.aliyun:dysmsapi20170525:${dysmsapi20170525}"){
+        exclude group: 'org.jacoco', module: 'org.jacoco.agent'
+    }
+    api "com.tencentcloudapi:tencentcloud-sdk-java-sms:${tencentcloudSdkJavaSms}"
+    api "com.github.oshi:oshi-core:${oshiCore}"
+    */
+}
